@@ -4,7 +4,7 @@
     "editor.mouseWheelZoom": true,
     "editor.showFoldingControls": "always",
     "files.trimTrailingWhitespace": true,
-    "files.trimFinalNewlines": true ,
+    "files.trimFinalNewlines": true,
     "workbench.colorCustomizations": {
         "activityBar.activeBackground": "#0000ff",
         "editor.lineHighlightBorder": "#ffffff",
