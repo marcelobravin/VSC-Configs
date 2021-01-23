@@ -1,0 +1,40 @@
+{
+    "editor.minimap.showSlider": "always",
+    "editor.insertSpaces": false,
+    "editor.mouseWheelZoom": true,
+    "editor.showFoldingControls": "always",
+    "files.trimTrailingWhitespace": true,
+    "files.trimFinalNewlines": true,
+    "workbench.colorCustomizations": {
+        "activityBar.activeBackground": "#0000ff",
+        "editor.lineHighlightBorder": "#ffffff",
+        "tab.activeBackground": "#0000ff",
+        "minimapSlider.activeBackground": "#0000ff55",
+        "editorGutter.background": "#000000",
+        "editorGutter.foldingControlForeground": "#ffff00",
+        "editorLineNumber.foreground": "#333",
+        "editorLineNumber.activeForeground": "#ffffff",
+        //"focusBorder": "#ff0000"
+        "icon.foreground": "#ff0000",
+        //"menu.background": "#ff0000"
+        "menubar.selectionBackground": "#0000ff",
+        "menubar.selectionForeground": "#ffffff",
+        "minimap.errorHighlight": "#ff0000",
+        "minimapSlider.background": "#66666666",
+        "minimapSlider.hoverBackground": "#0000cc55",
+        "statusBar.foreground": "#ffffff",
+        "sideBar.border": "#111",
+        "sideBar.background": "#000000",
+        "tab.inactiveBackground": "#000000",
+        "tab.unfocusedHoverBackground": "#0000cc55",
+        "titleBar.activeBackground": "#111"
+    },
+
+    "workbench.colorTheme": "Default Dark+",
+    "editor.tokenColorCustomizations": {
+        "[Default Dark+]": {
+            "comments": "#ff0000"
+
+        }
+    }
+}
