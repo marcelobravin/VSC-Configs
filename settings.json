@@ -14,7 +14,7 @@
         "editorGutter.foldingControlForeground": "#ffff00",
         "editorLineNumber.foreground": "#333",
         "editorLineNumber.activeForeground": "#ffffff",
-        //"focusBorder": "#ff0000"
+        //"focusBorder": "#ff000f"
         "icon.foreground": "#ff0000",
         //"menu.background": "#ff0000"
         "menubar.selectionBackground": "#0000ff",
