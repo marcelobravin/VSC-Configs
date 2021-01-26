@@ -1,11 +1,16 @@
 {
+	// references
+	// https://code.visualstudio.com/docs/getstarted/themes#_customizing-a-color-theme
+	// https://code.visualstudio.com/docs/getstarted/settings
+
+	// ------------------------------------------------------------------------- configs
 	"editor.minimap.showSlider": "always",
 	"editor.insertSpaces": false, /////////////////////////////
 	"editor.detectIndentation": false, ////////////////////////
 	"editor.mouseWheelZoom": true,
 	"editor.showFoldingControls": "always",
 	"files.trimTrailingWhitespace": true,
-	"editor.mouseWheelScrollSensitivity": .01,
+	"editor.mouseWheelScrollSensitivity": 1,
 	"files.trimFinalNewlines": true,
 	"window.title": "${activeEditorLong}${separator}${rootName}",
 	"files.insertFinalNewline": true,
@@ -18,23 +23,38 @@
 	"editor.renderWhitespace": "boundary",
 	"window.newWindowDimensions": "inherit",
 
-	// editor colors
+	// ------------------------------------------------------------------------- editor colors
+	// https://code.visualstudio.com/api/references/theme-color
 	"workbench.colorCustomizations": {
+		// "button.background": "#ffff00",
+		"activityBar.background": "#222",
+		"activityBarBadge.background": "#f00",
+		"activityBar.border": "#000",
+
 		"activityBar.activeBackground": "#0000ff",
 		"editor.lineHighlightBorder": "#ffffff",
 		"tab.activeBackground": "#0000ff",
 		"minimapSlider.activeBackground": "#0000ff55",
-		"editorGutter.background": "#000000",
+		"editor.background": "#000",
+		"editorGutter.background": "#111",
 		"editorGutter.foldingControlForeground": "#ffff00",
 		"editorLineNumber.foreground": "#333",
 		"editorLineNumber.activeForeground": "#ffffff",
-		//"focusBorder": "#ff000f"
+		"editorCursor.foreground": "#00b7ffbb",
+		"editorCursor.background": "#f00",
+		"editor.selectionHighlightBackground": "#0000ff99",
+		"editor.wordHighlightBackground": "#ff00ff",
+		"editorWhitespace.foreground": "#222",
+		// "focusBorder": "#ff000f"
 		"icon.foreground": "#ff0000",
-		//"menu.background": "#ff0000"
+		"editorBracketMatch.border": "#fff",
+		"selection.background": "#0f0",
+		"editorBracketMatch.background": "#ff0000",
+		// "menu.background": "#ff0000"
 		"menubar.selectionBackground": "#0000ff",
 		"menubar.selectionForeground": "#ffffff",
-		"minimap.errorHighlight": "#ff0000",
-		"minimapSlider.background": "#66666666",
+		"minimap.errorHighlight": "#ff000055",
+		"minimapSlider.background": "#66666644",
 		"minimapSlider.hoverBackground": "#0000cc55",
 		"statusBar.foreground": "#ffffff",
 		"sideBar.border": "#111",
@@ -42,13 +62,111 @@
 		"tab.inactiveBackground": "#000000",
 		"tab.unfocusedHoverBackground": "#0000cc55",
 		"titleBar.activeBackground": "#111",
+
+
+		"minimap.findMatchHighlight": "#f00", // Highlight color for matches from search within files.
+		"minimap.selectionHighlight": "#00b7ffbb", // Highlight color for the editor selection.
+		// "minimap.errorHighlight": "#f00", // Highlight color for errors within the editor.
+		"minimap.warningHighlight": "#ff0", // Highlight color for warnings within the editor.
+		"minimap.background": "#000", // Minimap background color.
+		// "minimapSlider.background": "#f00", // Minimap slider background color.
+		// "minimapSlider.hoverBackground": "#f00", // Minimap slider background color when hovering.
+		// "minimapSlider.activeBackground": "#f00", // Minimap slider background color when clicked on.
+		"minimapGutter.addedBackground": "#0f0", // Minimap gutter color for added content.
+		"minimapGutter.modifiedBackground": "#00f", // Minimap gutter color for modified content.
+		"minimapGutter.deletedBackground": "#f00",
+		"editorGroup.emptyBackground": "#f00",
+		"tab.hoverForeground": "#fff",
 	},
 
-	// theme colors
+	// ------------------------------------------------------------------------- theme colors
 	"workbench.colorTheme": "Default Dark+",
 	"editor.tokenColorCustomizations": {
+
 		"[Default Dark+]": {
-			"comments": "#ff0000"
-		}
-	},
+			"comments": "#444444",
+		},
+			"textMateRules": [
+			{
+				"scope": ["entity.name.tag.html"],
+				"settings": {
+				//	"foreground": "#00f"
+					"foreground": "#c54a67"
+				}
+			},
+			{
+				"scope": ["source.js"],
+				"settings": {
+					"foreground": "#fff"
+				}
+			},
+			{
+				"scope": ["constant.language"], // true, false
+				"settings": {
+					"foreground": "#B4D3E2"
+				}
+			},
+			{
+				"scope": ["html"],
+				"settings": {
+					"foreground": "#f00"
+				}
+			},
+			{
+				"scope": ["source comment.block"],
+				"settings": {
+					"foreground": "#7F50BE"
+				}
+			},
+			{
+				"scope": [
+					"constant" // String, Number, Boolean…, this, super
+				],
+				"settings": {
+					"foreground": "#3E87E3"
+				}
+			},
+			{
+				"scope": [
+					"constant.numeric"
+				],
+				"settings": {
+					"foreground": "#ff0"
+				}
+			},
+			{
+				"scope": [
+					"entity.name.type.class", //class names
+					"keyword", //import, export, return…
+					"constant", //String, Number, Boolean…, this, super
+					"storage.modifier", //static keyword
+					"storage.type.class.js", //class keyword
+
+					"invalid",
+					"keyword.operator",
+					"constant.numeric.css",
+					"keyword.other.unit.px.css",
+					"constant.numeric"
+				],
+				"settings": {
+					"fontStyle": "bold",
+				}
+			},
+			{
+				"scope": [
+					"comment",
+					"entity.name.type.class", //class names
+					"keyword", //import, export, return…
+					"storage.modifier", //static keyword
+					"storage.type.class.js", //class keyword
+
+					"invalid",
+					"keyword.operator",
+				],
+				"settings": {
+					"fontStyle": "italic", // :"" para tirar italic
+				}
+			},
+		]
+	}
 }
