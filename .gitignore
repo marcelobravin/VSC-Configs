@@ -4,3 +4,8 @@
 *.vscdb
 *.backup
 *.vscdb
+globalStorage/state.vscdb
+globalStorage/state.vscdb.backup
+workspaceStorage/70451421f08682b12555d01469eabedd/state.vscdb
+workspaceStorage/70451421f08682b12555d01469eabedd/state.vscdb.backup
+workspaceStorage/cc5f5784c98be2a4c8d3d40d79d1fd62/state.vscdb
