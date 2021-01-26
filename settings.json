@@ -4,100 +4,124 @@
 	// https://code.visualstudio.com/docs/getstarted/settings
 
 	// ------------------------------------------------------------------------- configs
-	"editor.minimap.showSlider": "always",
-	"editor.insertSpaces": false, ///////////////////////////// dependent 1
-	"editor.detectIndentation": false, //////////////////////// dependent 1
-	"editor.mouseWheelZoom": true,
-	"editor.showFoldingControls": "always",
-	"editor.mouseWheelScrollSensitivity": 1,
-	"editor.renderWhitespace": "boundary",
-	"editor.cursorSmoothCaretAnimation": true,
-	"editor.rulers": [80],
-	"editor.smoothScrolling": true,
+	"editor.minimap.showSlider"                                                 : "always",
+	"editor.insertSpaces"                                                       : false, ///////////////////////////// dependent 1
+	"editor.detectIndentation"                                                  : false, //////////////////////// dependent 1
+	"editor.mouseWheelZoom"                                                     : true,
+	"editor.showFoldingControls"                                                : "always",
+	"editor.mouseWheelScrollSensitivity"                                        : 1,
+	"editor.renderWhitespace"                                                   : "boundary",
+	"editor.cursorSmoothCaretAnimation"                                         : true,
+	"editor.rulers"                                                             : [80],
+	"editor.smoothScrolling"                                                    : true,
 
-	"files.trimTrailingWhitespace": true,
-	"files.trimFinalNewlines": true,
-	"files.insertFinalNewline": true,
+	"files.trimTrailingWhitespace"                                              : true,
+	"files.trimFinalNewlines"                                                   : true,
+	"files.insertFinalNewline"                                                  : true,
 
-	"html.format.indentHandlebars": true,
+	"html.format.indentHandlebars"                                              : true,
 
-	"window.title": "${activeEditorLong}${separator}${rootName}",
-	"window.newWindowDimensions": "inherit",
+	"window.title"                                                              : "${activeEditorLong}${separator}${rootName}",
+	"window.newWindowDimensions"                                                : "inherit",
 
-	// "workbench.editor.labelFormat": "short",
-	"workbench.editor.scrollToSwitchTabs": true,
-	"workbench.editor.highlightModifiedTabs": true,
+	// "workbench.editor.labelFormat"                                           : "short",
+	"workbench.editor.scrollToSwitchTabs"                                       : true,
+	"workbench.editor.highlightModifiedTabs"                                    : true,
 
 	// ------------------------------------------------------------------------- vsc window colors
 	// https://code.visualstudio.com/api/references/theme-color
 	"workbench.colorCustomizations": {
-		// "button.background": "#ffff00",
-		"activityBar.background": "#222",
-		"activityBarBadge.background": "#f00",
-		"activityBar.border": "#000",
-		"activityBar.activeBackground": "#0000ff",
 
-		// "editor.findHighlightBackground": "#0DF0FF33",
-		"editor.selectionBackground": "#0DF0FF33",
-		"editor.lineHighlightBackground": "#00b7ff11",
-		"editor.lineHighlightBorder": "#ffffff00",
-		"editor.background": "#000",
-		"editor.selectionHighlightBackground": "#0000ff99",
-		"editor.wordHighlightBackground": "#ff00ff",
+		// "button.background"                                                  : "#ffff00",
+		"activityBar.background"                                                : "#222", // extreme left icons column
+		"activityBarBadge.background"                                           : "#f00", // notification of alterations in the icons column
+		"activityBar.border"                                                    : "#000",
+		"activityBar.activeBackground"                                          : "#0000ff",
+
+		"editorError.background"                                                : "#ff80ab00", // wavy red line below syntax errors
+		"editorError.foreground"                                                : "#f00", // wavy red line below syntax errors
+		"editorWarning.background"                                              : "#ffc40000",
+		"editorWarning.foreground"                                              : "#ffc400",
+		"editorInfo.background"                                                 : "#00ffff",
+
+		"editor.rangeHighlightBackground": "#00AA0055",
+		"editor.inactiveSelectionBackground"                                    : "#ffffff22", // inactive selection
+		"editor.findMatchBackground"                                            : "#FDF0FF11", // current found occurrence of the find selection
+		"editor.selectionBackground"                                            : "#0DF0FF33", // selected text
+		"editor.findMatchHighlightBackground"                                   : "#ff00ff22", // ocurrences of the find selection
+		"editor.lineHighlightBackground"                                        : "#00b7ff22", // selected line
+		"editor.lineHighlightBorder"                                            : "#ffffff00", // selected line
+		"editor.background"                                                     : "#000", // text edition background color
+		"editor.selectionHighlightBackground"                                   : "#0000ff55", // ocurrences of the find selection
+		"editor.findRangeHighlightBackground"                                   : "#f0f", // ocurrences of the find selection in the minimap
+		"editor.wordHighlightBackground"                                        : "#f0f5",
 
 		// "editor.renderLineHighlight": "all",
 
-		"editorIndentGuide.activeBackground": "#00b7ffbb",
-		"editorIndentGuide.background": "#fff1",
+		"editorIndentGuide.activeBackground"                                    : "#00b7ffbb", // active indent guide, when is enabled
+		"editorIndentGuide.background"                                          : "#fff1", // inactive indent guide, when is enabled
 
-		"editorGutter.background": "#111",
-		"editorGutter.foldingControlForeground": "#ffff00",
+		"editorGutter.background"                                               : "#111", // gutter background
+		"editorGutter.foldingControlForeground"                                 : "#ffff00", // gutter fold icon
 
-		"editorLineNumber.foreground": "#333",
-		"editorLineNumber.activeForeground": "#ffffff",
+		"editorLineNumber.foreground"                                           : "#333", // gutter inactive line number
+		"editorLineNumber.activeForeground"                                     : "#ffffff", // gutter active line number
 
-		"editorGroup.emptyBackground": "#f00",
-		"editorCursor.foreground": "#00b7ffbb",
-		"editorCursor.background": "#f00",
+		// "editorGroup.emptyBackground"                                           : "#f00",
+		"editorCursor.foreground"                                               : "#00b7ffbb", // cursor color
+		// "editorCursor.background"                                               : "#f00",
 
+		"editorWhitespace.foreground"                                           : "#222", // white space renderization color, when is enabled
+		"editorBracketMatch.border"                                             : "#fff", // bracket match
+		"editorBracketMatch.background"                                         : "#0000ff", // bracket match
+		// "focusBorder"                                                        : "#ff000f"
+		"icon.foreground"                                                       : "#ff0000",
+		"menu.background"                                                       : "#000055ee", // context menu, dropdown menus
+		"menubar.selectionBackground"                                           : "#0000ff", // dropdown menus
+		"menubar.selectionForeground"                                           : "#ffffff", // dropdown menus
 
-		"editorWhitespace.foreground": "#222",
-		"editorBracketMatch.border": "#fff",
-		"editorBracketMatch.background": "#ff0000",
-		// "focusBorder": "#ff000f"
-		"icon.foreground": "#ff0000",
-		// "menu.background": "#ff0000"
-		"menubar.selectionBackground": "#0000ff",
-		"menubar.selectionForeground": "#ffffff",
+		"minimapSlider.activeBackground"                                        : "#0000ff55",
+		"minimapSlider.background"                                              : "#66666644",
+		"minimapSlider.hoverBackground"                                         : "#0000cc55",
+		"minimap.findMatchHighlight"                                            : "#f0f5", // Highlight color for matches from search within files.
+		"minimap.selectionHighlight"                                            : "#00b7ffbb", // Highlight color for the editor selection.
+		"minimap.errorHighlight"                                                : "#f00", // Highlight color for errors within the editor.
+		"minimap.warningHighlight"                                              : "#ff0", // Highlight color for warnings within the editor.
+		"minimap.background"                                                    : "#000", // Minimap background color.
+		// "minimapSlider.background"                                           : "#f00", // Minimap slider background color.
+		// "minimapSlider.hoverBackground"                                      : "#f00", // Minimap slider background color when hovering.
+		// "minimapSlider.activeBackground"                                     : "#f00", // Minimap slider background color when clicked on.
+		"minimapGutter.addedBackground"                                         : "#0f0", // Minimap gutter color for added content.
+		"minimapGutter.modifiedBackground"                                      : "#00f", // Minimap gutter color for modified content.
+		"minimapGutter.deletedBackground"                                       : "#f00",
 
-		"minimapSlider.activeBackground": "#0000ff55",
-		"minimap.errorHighlight": "#ff000055",
-		"minimapSlider.background": "#66666644",
-		"minimapSlider.hoverBackground": "#0000cc55",
-		"minimap.findMatchHighlight": "#f00", // Highlight color for matches from search within files.
-		"minimap.selectionHighlight": "#00b7ffbb", // Highlight color for the editor selection.
-		// "minimap.errorHighlight": "#f00", // Highlight color for errors within the editor.
-		"minimap.warningHighlight": "#ff0", // Highlight color for warnings within the editor.
-		"minimap.background": "#000", // Minimap background color.
-		// "minimapSlider.background": "#f00", // Minimap slider background color.
-		// "minimapSlider.hoverBackground": "#f00", // Minimap slider background color when hovering.
-		// "minimapSlider.activeBackground": "#f00", // Minimap slider background color when clicked on.
-		"minimapGutter.addedBackground": "#0f0", // Minimap gutter color for added content.
-		"minimapGutter.modifiedBackground": "#00f", // Minimap gutter color for modified content.
-		"minimapGutter.deletedBackground": "#f00",
+		// "selection.background"                                                  : "#0f0",
+		"statusBar.foreground"                                                  : "#ffffff", // status bar
+		"sideBar.border"                                                        : "#000", // sidebar
+		"sideBar.background"                                                    : "#000", // sidebar
 
-		"selection.background": "#0f0",
-		"statusBar.foreground": "#ffffff",
-		"sideBar.border": "#111",
-		"sideBar.background": "#000000",
+		"tab.inactiveBackground"                                                : "#000", // inactive tabs
+		"tab.inactiveForeground"                                                : "#666", // inactive tabs
+		"tab.activeBackground"                                                  : "#000055", // opened tab
+		"tab.unfocusedHoverBackground"                                          : "#0000ff", // hovered tab
+		"tab.hoverForeground"                                                   : "#fff", // hovered tab
 
-		"tab.inactiveBackground": "#000000",
-		"tab.unfocusedHoverBackground": "#0000cc55",
-		"tab.activeBackground": "#0000ff",
+		"titleBar.activeBackground"                                             : "#111", // window title
+		"titleBar.inactiveForeground"                                           : "#666", // window title
 
-		"titleBar.activeBackground": "#111",
+		"editorOverviewRuler.background": "#000", // scrollbar end
+		"editorOverviewRuler.border": "#111", // scrollbar end
+		"editorUnnecessaryCode.opacity": "#f009",
+		"panel.background": "#0004", // terminal (ctrl+')
+		"panelTitle.activeForeground": "#fff", // terminal selected tab
+		"panelTitle.inactiveForeground": "#666", // terminal inactive tabs
+		"breadcrumb.foreground": "#666", // breadcrumbs
+		"breadcrumb.focusForeground": "#0ff", // hovered breadcrumbs
+		"breadcrumbPicker.background": "#000055ee", // context menu of breadcrumbs
+		// "input.background": "#000055ee", // ctrl+p
+		// "dropdown.background": "#000055ee", // ctrl+p
+		// "dropdown.listBackground": "#000055ee", // ctrl+p
 
-		"tab.hoverForeground": "#fff",
 	},
 
 	// ------------------------------------------------------------------------- opened file colors
@@ -105,7 +129,7 @@
 	"editor.tokenColorCustomizations": {
 
 		"[Default Dark+]": {
-			// "comments": "#444444",
+			// "comments"                                                           : "#444444",
 		},
 			"textMateRules": [
 			{
@@ -119,34 +143,12 @@
 				}
 			},
 			{
-				"scope": ["string"/* , "string.quoted.double" */],
-				"settings": {
-					"foreground": "#678CB1"
-				}
-			},
-			{
-				"scope": ["meta.embedded.block.html"],
-				"settings": {
-					"foreground": "#678CB1"
-				}
-			},
-			{
-				"scope": ["entity.other.attribute-name"],
-				"settings": {
-					"foreground": "#3E87E3"
-				}
-			},
-			{
 				"scope": [
-					"meta.tag.inline.any",
-					"punctuation.definition.tag.begin.xml",
-					"punctuation.definition.tag.end.xml",
-					"punctuation.section.embedded.begin.php",
-					"punctuation.section.embedded.end.php",
-					"punctuation.definition.tag.html"
+					"string",
+					"meta.embedded.block.html"
 				],
 				"settings": {
-					"foreground": "#333"
+					"foreground": "#678CB1"
 				}
 			},
 			{
@@ -162,9 +164,50 @@
 				}
 			},
 			// {
+			// 	"scope": [
+			// 		"constant.other.color",
+			// 		"support.constant.color.w3c-standard-color-name.css"
+			// 	],
+			// 	"settings": {
+			// 		"foreground": "#5697b8"
+			// 	}
+			// },
+			{
+				"scope": ["entity.other.attribute-name"],
+				"settings": {
+					"foreground": "#3E87E3"
+				}
+			},
+			{
+				"scope": [
+					"keyword.operator.class",
+					"support.type",
+					"support.class",
+					"meta.class",
+					"entity.name.type.class",
+					"entity.other.inherited-class"
+				],
+				"settings": {
+					"foreground": "#AE81FF"
+				}
+			},
+			{
+				"scope": [
+					"meta.tag.inline.any",
+					"punctuation.definition.tag.begin.xml",
+					"punctuation.definition.tag.end.xml",
+					"punctuation.section.embedded.begin.php",
+					"punctuation.section.embedded.end.php",
+					"punctuation.definition.tag.html"
+				],
+				"settings": {
+					"foreground": "#333"
+				}
+			},
+			// {
 			// 	"scope": ["constant.language"], // true, false
 			// 	"settings": {
-			// 		"foreground": "#B4D3E2"
+			// 		"foreground"                                                       : "#B4D3E2"
 			// 	}
 			// },
 			{
@@ -189,9 +232,7 @@
 				}
 			},
 			{
-				"scope": [
-					"punctuation.definition.variable"
-				],
+				"scope": ["punctuation.definition.variable"],
 				"settings": {
 					"foreground": "#333"
 				}
@@ -233,9 +274,7 @@
 				}
 			},
 			{
-				"scope": [
-					"constant" // String, Number, Boolean…, this, super
-				],
+				"scope": ["constant"], // String, Number, Boolean…, this, super
 				"settings": {
 					"foreground": "#3E87E3"
 				}
@@ -252,49 +291,37 @@
 				}
 			},
 			{
-				"scope": [
-					"keyword"
-				],
+				"scope": ["keyword"],
 				"settings": {
 					"foreground": "#64b2db"
 				}
 			},
 			{
-				"scope": [
-					"keyword.control"
-				],
+				"scope": ["keyword.control"],
 				"settings": {
 					"foreground": "#3E87E3"
 				}
 			},
 			{
-				"scope": [
-					"variable.other.global" // #_SESSION
-				],
+				"scope": ["variable.other.global"], // #_SESSION
 				"settings": {
 					"foreground": "#C8E4FD"
 				}
 			},
 			{
-				"scope": [
-					"constant.numeric"
-				],
+				"scope": ["constant.numeric"],
 				"settings": {
 					"foreground": "#ff0"
 				}
 			},
 			{
-				"scope": [
-					"storage"
-				],
+				"scope": ["storage"],
 				"settings": {
 					"foreground": "#64b2db"
 				}
 			},
 			{
-				"scope": [
-					"support.function"
-				],
+				"scope": ["support.function"],
 				"settings": {
 					"foreground": "#FFCD22"
 				}
