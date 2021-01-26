@@ -38,11 +38,9 @@
 		"activityBar.border"                                                    : "#000",
 		"activityBar.activeBackground"                                          : "#0000ff",
 
-		"editorError.background"                                                : "#ff80ab00", // wavy red line below syntax errors
-		"editorError.foreground"                                                : "#f00", // wavy red line below syntax errors
-		"editorWarning.background"                                              : "#ffc40000",
-		"editorWarning.foreground"                                              : "#ffc400",
-		"editorInfo.background"                                                 : "#00ffff",
+		"breadcrumb.foreground"                                                 : "#666", // breadcrumbs
+		"breadcrumb.focusForeground"                                            : "#0ff", // hovered breadcrumbs
+		"breadcrumbPicker.background"                                           : "#000055ee", // context menu of breadcrumbs
 
 		"editor.rangeHighlightBackground": "#00AA0055",
 		"editor.inactiveSelectionBackground"                                    : "#ffffff22", // inactive selection
@@ -56,44 +54,53 @@
 		"editor.findRangeHighlightBackground"                                   : "#f0f", // ocurrences of the find selection in the minimap
 		"editor.wordHighlightBackground"                                        : "#f0f5",
 
+		"editorError.background"                                                : "#ff80ab00", // wavy red line below syntax errors
+		"editorError.foreground"                                                : "#f00", // wavy red line below syntax errors
+		"editorWarning.background"                                              : "#ffc40000",
+		"editorWarning.foreground"                                              : "#ffc400",
+		"editorInfo.background"                                                 : "#00ffff",
 		// "editor.renderLineHighlight": "all",
 
 		"editorIndentGuide.activeBackground"                                    : "#00b7ffbb", // active indent guide, when is enabled
 		"editorIndentGuide.background"                                          : "#fff1", // inactive indent guide, when is enabled
-
 		"editorGutter.background"                                               : "#111", // gutter background
 		"editorGutter.foldingControlForeground"                                 : "#ffff00", // gutter fold icon
-
 		"editorLineNumber.foreground"                                           : "#333", // gutter inactive line number
 		"editorLineNumber.activeForeground"                                     : "#ffffff", // gutter active line number
-
 		// "editorGroup.emptyBackground"                                           : "#f00",
-		"editorCursor.foreground"                                               : "#00b7ffbb", // cursor color
 		// "editorCursor.background"                                               : "#f00",
-
+		"editorCursor.foreground"                                               : "#00b7ffbb", // cursor color
 		"editorWhitespace.foreground"                                           : "#222", // white space renderization color, when is enabled
 		"editorBracketMatch.border"                                             : "#fff", // bracket match
 		"editorBracketMatch.background"                                         : "#0000ff", // bracket match
+		"editorOverviewRuler.background"                                        : "#000", // scrollbar end
+		"editorOverviewRuler.border"                                            : "#111", // scrollbar end
+		"editorUnnecessaryCode.opacity"                                         : "#f009",
+
 		// "focusBorder"                                                        : "#ff000f"
 		"icon.foreground"                                                       : "#ff0000",
 		"menu.background"                                                       : "#000055ee", // context menu, dropdown menus
 		"menubar.selectionBackground"                                           : "#0000ff", // dropdown menus
 		"menubar.selectionForeground"                                           : "#ffffff", // dropdown menus
 
-		"minimapSlider.activeBackground"                                        : "#0000ff55",
-		"minimapSlider.background"                                              : "#66666644",
-		"minimapSlider.hoverBackground"                                         : "#0000cc55",
 		"minimap.findMatchHighlight"                                            : "#f0f5", // Highlight color for matches from search within files.
 		"minimap.selectionHighlight"                                            : "#00b7ffbb", // Highlight color for the editor selection.
 		"minimap.errorHighlight"                                                : "#f00", // Highlight color for errors within the editor.
 		"minimap.warningHighlight"                                              : "#ff0", // Highlight color for warnings within the editor.
 		"minimap.background"                                                    : "#000", // Minimap background color.
+		"minimapSlider.activeBackground"                                        : "#0000ff55",
+		"minimapSlider.background"                                              : "#66666644",
+		"minimapSlider.hoverBackground"                                         : "#0000cc55",
 		// "minimapSlider.background"                                           : "#f00", // Minimap slider background color.
 		// "minimapSlider.hoverBackground"                                      : "#f00", // Minimap slider background color when hovering.
 		// "minimapSlider.activeBackground"                                     : "#f00", // Minimap slider background color when clicked on.
 		"minimapGutter.addedBackground"                                         : "#0f0", // Minimap gutter color for added content.
 		"minimapGutter.modifiedBackground"                                      : "#00f", // Minimap gutter color for modified content.
 		"minimapGutter.deletedBackground"                                       : "#f00",
+
+		"panel.background"                                                      : "#0004", // terminal (ctrl+')
+		"panelTitle.activeForeground"                                           : "#fff", // terminal selected tab
+		"panelTitle.inactiveForeground"                                         : "#666", // terminal inactive tabs
 
 		// "selection.background"                                                  : "#0f0",
 		"statusBar.foreground"                                                  : "#ffffff", // status bar
@@ -105,23 +112,13 @@
 		"tab.activeBackground"                                                  : "#000055", // opened tab
 		"tab.unfocusedHoverBackground"                                          : "#0000ff", // hovered tab
 		"tab.hoverForeground"                                                   : "#fff", // hovered tab
+		"tab.border"                                                            : "#111", // tab border
 
 		"titleBar.activeBackground"                                             : "#111", // window title
 		"titleBar.inactiveForeground"                                           : "#666", // window title
-
-		"editorOverviewRuler.background": "#000", // scrollbar end
-		"editorOverviewRuler.border": "#111", // scrollbar end
-		"editorUnnecessaryCode.opacity": "#f009",
-		"panel.background": "#0004", // terminal (ctrl+')
-		"panelTitle.activeForeground": "#fff", // terminal selected tab
-		"panelTitle.inactiveForeground": "#666", // terminal inactive tabs
-		"breadcrumb.foreground": "#666", // breadcrumbs
-		"breadcrumb.focusForeground": "#0ff", // hovered breadcrumbs
-		"breadcrumbPicker.background": "#000055ee", // context menu of breadcrumbs
-		// "input.background": "#000055ee", // ctrl+p
-		// "dropdown.background": "#000055ee", // ctrl+p
-		// "dropdown.listBackground": "#000055ee", // ctrl+p
-
+		// "input.background"                                                   : "#000055ee", // ctrl+p
+		// "dropdown.background"                                                : "#000055ee", // ctrl+p
+		// "dropdown.listBackground"                                            : "#000055ee", // ctrl+p
 	},
 
 	// ------------------------------------------------------------------------- opened file colors
@@ -163,15 +160,6 @@
 					"foreground": "#B4D3E2"
 				}
 			},
-			// {
-			// 	"scope": [
-			// 		"constant.other.color",
-			// 		"support.constant.color.w3c-standard-color-name.css"
-			// 	],
-			// 	"settings": {
-			// 		"foreground": "#5697b8"
-			// 	}
-			// },
 			{
 				"scope": ["entity.other.attribute-name"],
 				"settings": {
