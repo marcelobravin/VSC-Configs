@@ -24,6 +24,7 @@
 	"window.title"                                                              : "${activeEditorLong}${separator}${rootName}",
 	"window.newWindowDimensions"                                                : "inherit",
 
+
 	// "workbench.editor.labelFormat"                                           : "short",
 	"workbench.editor.scrollToSwitchTabs"                                       : true,
 	"workbench.editor.highlightModifiedTabs"                                    : true,
