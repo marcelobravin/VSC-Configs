@@ -35,24 +35,25 @@
 		// "button.background"                                                  : "#ffff00",
 		"activityBar.background"                                                : "#222", // extreme left icons column
 		"activityBarBadge.background"                                           : "#f00", // notification of alterations in the icons column
-		"activityBar.border"                                                    : "#000",
-		"activityBar.activeBackground"                                          : "#0000ff",
+		"activityBar.border"                                                    : "#000", // border of the extreme left icons column
+		"activityBar.activeBackground"                                          : "#0000ff", // selected category of the extreme left column
 
 		"breadcrumb.foreground"                                                 : "#666", // breadcrumbs
 		"breadcrumb.focusForeground"                                            : "#0ff", // hovered breadcrumbs
 		"breadcrumbPicker.background"                                           : "#000055ee", // context menu of breadcrumbs
 
-		"editor.rangeHighlightBackground": "#00AA0055",
+		// "editor.rangeHighlightBackground"                                       : "#AA00AA44",
+		"editor.rangeHighlightBackground"                                       : "#00AA0044", // highlight of the selected line of the find
 		"editor.inactiveSelectionBackground"                                    : "#ffffff22", // inactive selection
 		"editor.findMatchBackground"                                            : "#FDF0FF11", // current found occurrence of the find selection
 		"editor.selectionBackground"                                            : "#0DF0FF33", // selected text
-		"editor.findMatchHighlightBackground"                                   : "#ff00ff22", // ocurrences of the find selection
+		"editor.findMatchHighlightBackground"                                   : "#00ff0022", // ocurrences of the find selection
 		"editor.lineHighlightBackground"                                        : "#00b7ff22", // selected line
 		"editor.lineHighlightBorder"                                            : "#ffffff00", // selected line
 		"editor.background"                                                     : "#000", // text edition background color
-		"editor.selectionHighlightBackground"                                   : "#0000ff55", // ocurrences of the find selection
+		"editor.selectionHighlightBackground"                                   : "#0000ff55", // ocurrences of selected word
 		"editor.findRangeHighlightBackground"                                   : "#f0f", // ocurrences of the find selection in the minimap
-		"editor.wordHighlightBackground"                                        : "#f0f5",
+		"editor.wordHighlightBackground"                                        : "#f0f5", // ocurrences of the find selection
 
 		"editorError.background"                                                : "#ff80ab00", // wavy red line below syntax errors
 		"editorError.foreground"                                                : "#f00", // wavy red line below syntax errors
@@ -77,23 +78,21 @@
 		"editorOverviewRuler.border"                                            : "#111", // scrollbar end
 		"editorUnnecessaryCode.opacity"                                         : "#f009",
 
-		// "focusBorder"                                                        : "#ff000f"
-		"icon.foreground"                                                       : "#ff0000",
+		// "focusBorder"                                                           : "#ff000f",
+		"icon.foreground"                                                       : "#00ffff", // buttons on find and extreme left menu column
 		"menu.background"                                                       : "#000055ee", // context menu, dropdown menus
 		"menubar.selectionBackground"                                           : "#0000ff", // dropdown menus
 		"menubar.selectionForeground"                                           : "#ffffff", // dropdown menus
 
-		"minimap.findMatchHighlight"                                            : "#f0f5", // Highlight color for matches from search within files.
-		"minimap.selectionHighlight"                                            : "#00b7ffbb", // Highlight color for the editor selection.
-		"minimap.errorHighlight"                                                : "#f00", // Highlight color for errors within the editor.
-		"minimap.warningHighlight"                                              : "#ff0", // Highlight color for warnings within the editor.
+		"minimap.findMatchHighlight"                                            : "#0f05", // Highlight color for matches from search when find is activew
+		"minimap.selectionHighlight"                                            : "#00b7ffbb", // Highlight color for the selected line in the minimap
+		"minimap.errorHighlight"                                                : "#f00", // Highlight color for errors within the editor
+		"minimap.warningHighlight"                                              : "#ff0", // Highlight color for warnings within the editor
 		"minimap.background"                                                    : "#000", // Minimap background color.
-		"minimapSlider.activeBackground"                                        : "#0000ff55",
-		"minimapSlider.background"                                              : "#66666644",
-		"minimapSlider.hoverBackground"                                         : "#0000cc55",
-		// "minimapSlider.background"                                           : "#f00", // Minimap slider background color.
-		// "minimapSlider.hoverBackground"                                      : "#f00", // Minimap slider background color when hovering.
-		// "minimapSlider.activeBackground"                                     : "#f00", // Minimap slider background color when clicked on.
+
+		"minimapSlider.activeBackground"                                        : "#0000ff55", // active minimap rendered area indicator
+		"minimapSlider.background"                                              : "#66666644", // minimap rendered area indicator
+		"minimapSlider.hoverBackground"                                         : "#0000cc55", // hovered minimap rendered area indicator
 		"minimapGutter.addedBackground"                                         : "#0f0", // Minimap gutter color for added content.
 		"minimapGutter.modifiedBackground"                                      : "#00f", // Minimap gutter color for modified content.
 		"minimapGutter.deletedBackground"                                       : "#f00",
@@ -102,10 +101,9 @@
 		"panelTitle.activeForeground"                                           : "#fff", // terminal selected tab
 		"panelTitle.inactiveForeground"                                         : "#666", // terminal inactive tabs
 
-		// "selection.background"                                                  : "#0f0",
 		"statusBar.foreground"                                                  : "#ffffff", // status bar
-		"sideBar.border"                                                        : "#000", // sidebar
-		"sideBar.background"                                                    : "#000", // sidebar
+		"sideBar.border"                                                        : "#000", // left sidebar
+		"sideBar.background"                                                    : "#000", // left sidebar
 
 		"tab.inactiveBackground"                                                : "#000", // inactive tabs
 		"tab.inactiveForeground"                                                : "#666", // inactive tabs
@@ -192,12 +190,6 @@
 					"foreground": "#333"
 				}
 			},
-			// {
-			// 	"scope": ["constant.language"], // true, false
-			// 	"settings": {
-			// 		"foreground"                                                       : "#B4D3E2"
-			// 	}
-			// },
 			{
 				"scope": ["string constant"],
 				"settings": {
