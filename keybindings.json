@@ -1,0 +1,16 @@
+// Place your key bindings in this file to override the defaults
+[
+	// https://code.visualstudio.com/docs/getstarted/keybindings
+
+	{
+		"key"    : "ctrl+d",
+		"command": "editor.action.deleteLines",
+		"when"   : "editorTextFocus"
+	},
+
+	{
+		"key"    : "ctrl+shift+alt+s",
+		"command": "workbench.action.files.saveAll",
+		"when"   : "editorTextFocus"
+	},
+]

@@ -102,7 +102,8 @@
 		"panelTitle.activeForeground"                                           : "#fff", // terminal selected tab
 		"panelTitle.inactiveForeground"                                         : "#666", // terminal inactive tabs
 
-		"statusBar.foreground"                                                  : "#ffffff", // status bar
+		"statusBar.background"                                                  : "#0077ff", // lower status bar
+		"statusBar.foreground"                                                  : "#ffffff", // lower status bar
 		"sideBar.border"                                                        : "#000", // left sidebar
 		"sideBar.background"                                                    : "#000", // left sidebar
 
@@ -118,6 +119,7 @@
 		// "input.background"                                                   : "#000055ee", // ctrl+p
 		// "dropdown.background"                                                : "#000055ee", // ctrl+p
 		// "dropdown.listBackground"                                            : "#000055ee", // ctrl+p
+		"sash.hoverBorder"                                                      : "#000055ee", // ctrl+p
 	},
 
 	// ------------------------------------------------------------------------- opened file colors
