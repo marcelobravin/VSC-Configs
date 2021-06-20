@@ -119,7 +119,7 @@
 		// "input.background"                                                   : "#000055ee", // ctrl+p
 		// "dropdown.background"                                                : "#000055ee", // ctrl+p
 		// "dropdown.listBackground"                                            : "#000055ee", // ctrl+p
-		"sash.hoverBorder"                                                      : "#000055ee", // ctrl+p
+		"sash.hoverBorder"                                                      : "#000055ee" // ctrl+p
 	},
 
 	// ------------------------------------------------------------------------- opened file colors
@@ -353,7 +353,7 @@
 					"constant.numeric"
 				],
 				"settings": {
-					"fontStyle": "bold",
+					"fontStyle": "bold"
 				}
 			},
 			//////////////////////////////////////////////////////////////////// italic
@@ -366,12 +366,18 @@
 					"storage.type.class.js", //class keyword
 
 					"invalid",
-					"keyword.operator",
+					"keyword.operator"
 				],
 				"settings": {
-					"fontStyle": "italic", // :"" para tirar italic
+					"fontStyle": "italic" // :"" para tirar italic
 				}
-			},
+			}
 		]
-	}
+	},
+	"editor.wordWrap": "on",
+	"terminal.integrated.tabs.enabled": true,
+	//"php.validate.executablePath": "C:\\xampp\\php\\php.exe"// windows
+	"explorer.confirmDelete": false,
+	"security.workspace.trust.untrustedFiles": "open",
+	"editor.multiCursorModifier": "ctrlCmd"
 }

@@ -1,0 +1,51 @@
+{
+	"Input type text": {
+		"prefix": "text",
+		"body": [
+			"<input type=\"text\" name=\"$0\" id=\"$0\" />"
+		],
+		"description": "Input type text"
+	},
+
+	"Input type submit": {
+		"prefix": "submit",
+		"body": [
+			"<input type=\"submit\" value=\"$0\" />"
+		],
+		"description": "Input type text"
+	},
+
+	"Form with method": {
+		"prefix": "form",
+		"body": [
+			"<form action=\"$1\" method=\"$2\">",
+			"$3",
+			"</form>"
+		],
+		"description": "Input type text"
+	},
+
+	"PHP": {
+		"prefix": "php",
+		"body": [
+			"<?php $1 ?>"
+		],
+		"description": "Input type text"
+	},
+
+	"PHP echo": {
+		"prefix": "echo",
+		"body": [
+			"<?php echo $1 ?>"
+		],
+		"description": "Input type text"
+	},
+
+	"Open php": {
+		"prefix": "php",
+		"body": [
+			"<?php "
+		],
+		"description": "Log output to console"
+	},
+}

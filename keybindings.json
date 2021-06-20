@@ -3,8 +3,8 @@
 	// https://code.visualstudio.com/docs/getstarted/keybindings
 
 	{
-		"key"    : "ctrl+d",
-		"command": "editor.action.deleteLines",
+		"key"    : "ctrl+shift+c",
+		"command": "editor.action.blockComment",
 		"when"   : "editorTextFocus"
 	},
 
@@ -13,4 +13,37 @@
 		"command": "workbench.action.files.saveAll",
 		"when"   : "editorTextFocus"
 	},
+
+	{
+		"key": "ctrl+1",
+		// "modifier": "alt",
+		"command": "editor.action.insertSnippet",
+		"when": "editorTextFocus",
+		"args": {
+			"snippet": "<div>#${TM_SELECTED_TEXT}#</div>"
+		}
+	},
+	{
+		"key": "ctrl+up ctrl+up",
+		"command": "editor.emmet.action.incrementNumberByOne"
+	},
+	{
+		"key": "shift+alt+down",
+		"command": "editor.action.transformToLowercase"
+	},
+	{
+		"key": "shift+alt+up",
+		"command": "editor.action.transformToUppercase"
+	},
+	// {
+		// "key": "ctrl+shift+v",
+		// "command": "editor.action.selectionClipboardPaste"
+	// },
+
+	// {
+	// 	"key": "enter",
+	// 	"command": "type",
+	// 	"args": { "text": "Hello World" },
+	// 	"when": "editorTextFocus"
+	// }
 ]

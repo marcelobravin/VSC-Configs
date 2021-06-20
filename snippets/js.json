@@ -1,0 +1,21 @@
+{
+	"Print to console": {
+		"prefix": "log",
+		"body": [
+			"console.log('$1');",
+			"$2"
+		],
+		"description": "Log output to console"
+	},
+
+	"Document ready": {
+		"prefix": "ready",
+		"body": [
+			"$(document).ready(function(){",
+			"$1",
+			"});"
+		],
+		"description": "Log output to console"
+	}
+
+}

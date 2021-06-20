@@ -1,0 +1,68 @@
+{
+	"Print raw": {
+		"prefix": "print",
+		"body": [
+			"echo('<pre>');",
+			"print_r($0);",
+			"echo('</pre>');"
+		],
+		"description": "Log output to console"
+	},
+
+	"Session": {
+		"prefix": "session",
+		"body": [
+			"\\$_SESSION"
+		],
+		"description": "Log output to console"
+	},
+
+	"Post": {
+		"prefix": "post",
+		"body": [
+			"\\$_POST"
+		],
+		"description": "Log output to console"
+	},
+
+	"Get": {
+		"prefix": "get",
+		"body": [
+			"\\$_GET"
+		],
+		"description": "Log output to console"
+	},
+
+	"Open php": {
+		"prefix": "php",
+		"body": [
+			"<?php ?>"
+		],
+		"description": "Log output to console"
+	},
+
+	"Benchmark": {
+		"prefix": "clock",
+		"body": [
+			"\\$pph_strt = microtime(true);",
+			"//The code he posted for login.php",
+			"\\$end = (microtime(true) - \\$pph_strt);",
+			"\\$wait = bcmul((1 - $end), 1000000);  // usleep(250000) 1/4 of a second",
+			"usleep ( $wait );",
+			"echo \"<br>Execution time:\".(microtime(true) - $pph_strt).\"; \";"
+		],
+		"description": "Log output to console"
+	},
+
+
+	"if": {
+		"prefix": "if",
+		"body": [
+			"if ($1) {",
+			"$2",
+			"}"
+		],
+		"description": "Log output to console"
+	},
+
+}
