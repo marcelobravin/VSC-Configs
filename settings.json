@@ -376,9 +376,9 @@
 	},
 	"editor.wordWrap": "on",
 	"terminal.integrated.tabs.enabled": true,
-	"php.validate.executablePath": "C:\\xampp\\php\\php.exe", // windows
 	"explorer.confirmDelete": false,
 	"security.workspace.trust.untrustedFiles": "open",
 	"editor.multiCursorModifier": "ctrlCmd",
-	// "php.validate.executablePath": ""
+	"php.validate.executablePath": "C:\\xampp\\php\\php.exe" // windows
+	//"php.validate.executablePath": ""
 }

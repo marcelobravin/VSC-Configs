@@ -1,10 +1,11 @@
 {
+
 	"Input type text": {
 		"prefix": "text",
 		"body": [
-			"<input type=\"text\" name=\"$0\" id=\"$0\" />"
+			"<input type=\"text\" name=\"$1\" id=\"$1\" value=\"$2\" />"
 		],
-		"description": "Input type text"
+		"description": "Log output to console"
 	},
 
 	"Input type submit": {
@@ -48,4 +49,29 @@
 		],
 		"description": "Log output to console"
 	},
+
+	"Option": {
+		"prefix": "option",
+		"body": [
+			"<option value=\"$0\">$1</option>"
+		],
+		"description": "Log output to console"
+	},
+
+	"Checkbox": {
+		"prefix": "checkbox",
+		"body": [
+			"<input type=\"checkbox\" name=\"$0\" id=\"$0\" value=\"1\" />"
+		],
+		"description": "Log output to console"
+	},
+
+	"Textarea": {
+		"prefix": "textarea",
+		"body": [
+			"<textarea name=\"$0\" id=\"$0\"></textarea>"
+		],
+		"description": "Log output to console"
+	},
+
 }
