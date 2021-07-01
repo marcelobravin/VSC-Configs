@@ -33,6 +33,22 @@
 		"description": "Log output to console"
 	},
 
+	"Request": {
+		"prefix": "request",
+		"body": [
+			"\\$_REQUEST"
+		],
+		"description": "Log output to console"
+	},
+
+	"Server": {
+		"prefix": "server",
+		"body": [
+			"\\$_SERVER"
+		],
+		"description": "Log output to console"
+	},
+
 	"Open php": {
 		"prefix": "php",
 		"body": [
@@ -54,7 +70,6 @@
 		"description": "Log output to console"
 	},
 
-
 	"if": {
 		"prefix": "if",
 		"body": [
@@ -63,6 +78,6 @@
 			"}"
 		],
 		"description": "Log output to console"
-	},
+	}
 
 }
