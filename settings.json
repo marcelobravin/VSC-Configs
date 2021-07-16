@@ -448,5 +448,6 @@
 	"colorize.enable_search_variables": false,
 	"open-php-html-js-in-browser.selectedBrowser": "Chrome",
 	"editor.accessibilitySupport": "off",
+	"http.proxy": "http://10.10.193.25:3128",
 
 }

@@ -3,7 +3,7 @@
 	// https://code.visualstudio.com/docs/getstarted/keybindings
 
 	{
-		"key"    : "ctrl+shift+c",
+		"key"    : "ctrl+shift+/",
 		"command": "editor.action.blockComment",
 		"when"   : "editorTextFocus"
 	},
@@ -34,16 +34,6 @@
 	{
 		"key": "shift+alt+up",
 		"command": "editor.action.transformToUppercase"
-	},
-	// {
-		// "key": "ctrl+shift+v",
-		// "command": "editor.action.selectionClipboardPaste"
-	// },
+	}
 
-	// {
-	// 	"key": "enter",
-	// 	"command": "type",
-	// 	"args": { "text": "Hello World" },
-	// 	"when": "editorTextFocus"
-	// }
 ]
