@@ -380,8 +380,8 @@
 	"editor.multiCursorModifier": "ctrlCmd",
 	"explorer.confirmDragAndDrop": false,
 
-	// "php.validate.executablePath": "C:\\xampp\\php\\php.exe" // windows
-	"php.validate.executablePath": "",
+	"php.validate.executablePath": "C:\\xampp\\php\\php.exe", // windows
+	// "php.validate.executablePath": "",
 
 	"window.zoomLevel": -0.5,
 	"editor.fontSize": 14,
@@ -448,6 +448,8 @@
 	"colorize.enable_search_variables": false,
 	"open-php-html-js-in-browser.selectedBrowser": "Chrome",
 	"editor.accessibilitySupport": "off",
-	"http.proxy": "http://10.10.193.25:3128",
+	"http.proxyAuthorization": null,
+	"telemetry.enableCrashReporter": false,
+	// "http.proxy": "http://10.10.193.25:3128",
 
 }
