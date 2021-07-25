@@ -2,9 +2,9 @@
 	"Print raw": {
 		"prefix": "print",
 		"body": [
-			"echo('<pre>');",
+			"echo '<pre>';",
 			"print_r($0);",
-			"echo('</pre>');"
+			"echo '</pre>';"
 		],
 		"description": "Log output to console"
 	},

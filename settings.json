@@ -380,8 +380,8 @@
 	"editor.multiCursorModifier": "ctrlCmd",
 	"explorer.confirmDragAndDrop": false,
 
-	// "php.validate.executablePath": "C:\\xampp\\php\\php.exe" // windows
-	"php.validate.executablePath": "",
+	"php.validate.executablePath": "C:\\xampp\\php\\php.exe", // windows
+	// "php.validate.executablePath": "", // linux
 
 	"window.zoomLevel": -0,
 	"editor.fontSize": 14,
@@ -448,5 +448,17 @@
 	"colorize.enable_search_variables": false,
 	"open-php-html-js-in-browser.selectedBrowser": "Chrome",
 	"editor.accessibilitySupport": "off",
-	"http.proxy": "http://10.10.193.25:3128",
+	"sonarlint.connectedMode.project": {
+		"projectKey": "ROH"
+	},
+	"sonarlint.connectedMode.connections.sonarqube": [
+		{
+			// "serverUrl": "https://sonar.mycompany.com",
+			"serverUrl": "https://localhost:9000",
+			"token": "2e73bce63c3907abf3e4c2a918f09f969454eefc"
+		}
+	],
+	"sonarlint.ls.javaHome": "C:\\Program Files\\Java\\jdk-11.0.11+9",
+	"sonarlint.pathToNodeExecutable": "C:\\\\Program Files\\\\nodejs\\\\node.exe"
+	// "http.proxy": "http://10.10.193.25:3128" // rede interna da secretaria
 }
