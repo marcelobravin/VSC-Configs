@@ -384,7 +384,7 @@
 	// "php.validate.executablePath": "", // linux
 
 	"window.zoomLevel": -0,
-	"editor.fontSize": 14,
+	"editor.fontSize": 13,
 
 	////////////////////////////////////////////////////////////////////////////
 	"editor.linkedEditing": true,
@@ -455,10 +455,14 @@
 		{
 			// "serverUrl": "https://sonar.mycompany.com",
 			"serverUrl": "https://localhost:9000",
-			"token": "2e73bce63c3907abf3e4c2a918f09f969454eefc"
+			//"token": "2e73bce63c3907abf3e4c2a918f09f969454eefc" // casa
+			"token": "600bd961fee3ea1bdd2f5a92f74cc67425283303" // trabalho
+
 		}
 	],
-	"sonarlint.ls.javaHome": "C:\\Program Files\\Java\\jdk-11.0.11+9",
-	"sonarlint.pathToNodeExecutable": "C:\\\\Program Files\\\\nodejs\\\\node.exe"
-	// "http.proxy": "http://10.10.193.25:3128" // rede interna da secretaria
+	//"sonarlint.ls.javaHome": "C:\\Program Files\\Java\\jdk-11.0.11+9", // casa
+	"sonarlint.ls.javaHome": "/lib/jvm/java-1.11.0-openjdk-amd64/", // trabalho
+	// "sonarlint.pathToNodeExecutable": "C:\\\\Program Files\\\\nodejs\\\\node.exe", // windows
+	"sonarlint.pathToNodeExecutable": "/usr/bin/nodejs", // linux
+	"http.proxy": "http://10.10.193.25:3128" // rede interna da secretaria
 }
