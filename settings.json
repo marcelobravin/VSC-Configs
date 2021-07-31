@@ -455,14 +455,116 @@
 		{
 			// "serverUrl": "https://sonar.mycompany.com",
 			"serverUrl": "https://localhost:9000",
-			//"token": "2e73bce63c3907abf3e4c2a918f09f969454eefc" // casa
-			"token": "600bd961fee3ea1bdd2f5a92f74cc67425283303" // trabalho
+			"token": "2e73bce63c3907abf3e4c2a918f09f969454eefc" // casa
+			// "token": "600bd961fee3ea1bdd2f5a92f74cc67425283303" // trabalho
 
 		}
 	],
-	//"sonarlint.ls.javaHome": "C:\\Program Files\\Java\\jdk-11.0.11+9", // casa
-	"sonarlint.ls.javaHome": "/lib/jvm/java-1.11.0-openjdk-amd64/", // trabalho
-	// "sonarlint.pathToNodeExecutable": "C:\\\\Program Files\\\\nodejs\\\\node.exe", // windows
-	"sonarlint.pathToNodeExecutable": "/usr/bin/nodejs", // linux
-	"http.proxy": "http://10.10.193.25:3128" // rede interna da secretaria
+	"sonarlint.ls.javaHome": "C:\\Program Files\\Java\\jdk-11.0.11+9", // casa
+	// "sonarlint.ls.javaHome": "/lib/jvm/java-1.11.0-openjdk-amd64/", // trabalho
+	"sonarlint.pathToNodeExecutable": "C:\\\\Program Files\\\\nodejs\\\\node.exe", // windows
+	// "sonarlint.pathToNodeExecutable": "/usr/bin/nodejs", // linux
+	"toggleboolean.mapping": {
+
+		"0": 1,
+		"1": 0,
+		"true": false,
+		"false": true,
+		"yes": "no",
+		"no": "yes",
+		"on": "off",
+		"off": "on"
+	},
+	// "http.proxy": "http://10.10.193.25:3128" // rede interna da secretaria
+	"prettifySymbolsMode.substitutions": [{
+		"language": ["php", "js"],
+		"revealOn": "active-line",
+		"substitutions": [
+			//{ "ugly": "lambda",     "pretty": "λ" },
+
+			{ "ugly": "->",			"pretty": "→", "pre": "[^->]", "post": "[^->]" },
+			{ "ugly": "===",		"pretty": "≡", "pre": "[^<>=!]|^", "post": "[^<>=]|$" },
+			{ "ugly": "==", 		"pretty": "=", "pre": "[^<>=!]|^", "post": "[^<>=]|$" },
+			// { "ugly": "==",			     "pretty": "→", "pre": "[^->]", "post": "[^->]" },
+			{ "ugly": "!=", 		"pretty": "≠" },
+			{ "ugly": "<>", 		"pretty": "≠" },
+			{ "ugly": "!==", 		"pretty": "∃", "pre": "\\b", "post": "\\b" },
+			// { "ugly": ">",			"pretty": ">", "pre": "[^=\\-<>]|^", "post": "[^=\\-<>]|$" },
+			// { "ugly": "<",			"pretty": "<", "pre": "[^=\\-<>]|^", "post": "[^=\\-<>]|$" },
+			{ "ugly": ">=",			"pretty": "≥", "pre": "[^=\\-<>]|^", "post": "[^=\\-<>]|$" },
+			{ "ugly": "<=",			"pretty": "≤", "pre": "[^=\\-<>]|^", "post": "[^=\\-<>]|$" },
+
+			// { "ugly": "->",			"pretty": "→" },
+			// { "ugly": "<-",			"pretty": "←" },
+			{ "ugly": " / ",		"pretty": " ÷ " },
+			{ "ugly": "*",			"pretty": "×" },
+			{ "ugly": "+=",			"pretty": "⥬" },
+			{ "ugly": "-=",			"pretty": "⥭" },
+			{ "ugly": "*=",			"pretty": "≢" },
+			{ "ugly": "/=",			"pretty": "≢" },
+			{ "ugly": ".=",			"pretty": "≢" },
+			{ "ugly": "\\+\\+",			"pretty": "⤊"},
+			{ "ugly": "\\-\\-",			"pretty": "⤋" },
+
+			{ "ugly": "'",			"pretty": "′" },
+			{ "ugly": "\\(",			"pretty": "⸨" },
+			{ "ugly": "\\)",			"pretty": "⸩" },
+
+			{ "ugly": "=",			"pretty": "≔", "pre": "[^<>=!]|^", "post": "[^<>=]|$" },
+
+
+			{ "ugly": "not\\s?",	"pretty": "¬", "pre": "\\b", "post": "\\b" },
+			{ "ugly": "\\!\\s",			"pretty": "¬", "pre": "\\b", "post": "\\b" },
+			{ "ugly": ";",			"pretty": "Ω"},
+			// { "ugly": "\\.",			"pretty": "•"},
+			{ "ugly": ";",			"pretty": "■"},
+			// { "ugly": "1",			"pretty": "❶"},
+
+
+
+			{ "ugly": "false",		"pretty": "⊥", "pre": "\\b", "post": "\\b" },
+			{ "ugly": "true",		"pretty": "⊤", "pre": "\\b", "post": "\\b" },
+			{ "ugly": "null",		"pretty": "∅", "pre": "\\b", "post": "\\b"},
+			{ "ugly": "function",	"pretty": "ƒ"},
+			{ "ugly": "and",		"pretty": "∧", "pre": "\\s|^", "post": "\\s|$"},
+			{ "ugly": "&&",			"pretty": "∧", "pre": "\\s|^", "post": "\\s|$"},
+			{ "ugly": "or",			"pretty": "∨", "pre": "\\s|^", "post": "\\s|$"},
+			{ "ugly": "||",			"pretty": "∨"},
+			{ "ugly": "return",		"pretty": "≪", "pre": "[^\\!@=<>]|^" },
+			{ "ugly": "\\\\",			"pretty": "λ"},
+			{ "ugly": "\"",			"pretty": "″" },
+			// { "ugly": "!",  "pretty": "¬", "pre": "\\b", "post": "\\b" },
+			// { "ugly": "sum",		"pretty": "∑", "pre": "\\(", "post": "\\b"},
+			// { "ugly": "math.pi",      "pretty": "π", "pre": "\\b", "post": "\\b"},
+			////		]},{
+				////		"language": ["ocaml", {"pattern": "**/*.{ml}"}],
+				////		"revealOn": "none",
+			////		"adjustCursorMovement": true,
+			////		"substitutions": [
+			//{ "ugly": "fun",			     "pretty": "λ", "pre": "\\b", "post": "\\b" },
+			// { "ugly": "List[.]for_all", "pretty": "∀", "pre": "\\b", "post": "\\b" },
+			// { "ugly": "List[.]exists",  "pretty": "∃", "pre": "\\b", "post": "\\b" },
+			// { "ugly": "List[.]mem",     "pretty": "∈", "pre": "\\b", "post": "\\b" },
+			// { "ugly": "\\|",			     "pretty": "║", "pre": "^\\s+" }
+			// { "ugly": ">>",			     "pretty": "≫", "pre": "[^=<>]|^", "post": "[^=<>]|$" },
+			// { "ugly": "\\(\\)",   "pretty": "∅" },
+			// { "ugly": "\\|\\|",   "pretty": "∨" },
+			// { "ugly": "not\\s?",  "pretty": "¬", "pre": "\\b", "post": "\\b" },
+			// { "ugly": "sqrt\\s?", "pretty": "√", "pre": "\\b", "post": "\\b" },
+			// { "ugly": "alpha",    "pretty": "α", "pre": "\\b", "post": "\\b" },
+			// { "ugly": "beta",     "pretty": "β", "pre": "\\b", "post": "\\b" },
+			// { "ugly": "gamma",    "pretty": "γ", "pre": "\\b", "post": "\\b" },
+			// { "ugly": "delta",    "pretty": "δ", "pre": "\\b", "post": "\\b" },
+			// { "ugly": "!!",			"pretty": "‼" },
+			// { "ugly": "\\.\\.",   "pretty": "…" },
+			// { "ugly": "fun",			    "pretty": "λ", "pre": "\\b", "post": "\\b" },
+			// { "ugly": "<-",			     "pretty": "←" },
+			// { "ugly": "->",			     "pretty": "→" },
+			// { "ugly": "=",			      "pretty": "=", "pre": "[^<>=!]|^", "post": "[^<>=]|$" },
+			// { "ugly": "==",			     "pretty": "≡" },
+			// { "ugly": "!=",			     "pretty": "≢" },
+			// { "ugly": "<>",			     "pretty": "≠" },
+
+
+		]}]
 }
