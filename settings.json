@@ -368,7 +368,8 @@
 					"keyword.operator"
 				],
 				"settings": {
-					"fontStyle": "italic" // :"" para tirar italic
+					"fontStyle": ""
+					// "fontStyle": "italic" // :"" para tirar italic
 				}
 			}
 		]
@@ -477,34 +478,46 @@
 	},
 	// "http.proxy": "http://10.10.193.25:3128" // rede interna da secretaria
 	"prettifySymbolsMode.substitutions": [{
-		"language": ["php", "js"],
-		"revealOn": "active-line",
+		"language": ["php", "java"],
+		// "revealOn": "active-line",
+		"revealOn": "selection",
 		"substitutions": [
 			//{ "ugly": "lambda",     "pretty": "λ" },
 
 			{ "ugly": "->",			"pretty": "→", "pre": "[^->]", "post": "[^->]" },
 			{ "ugly": "===",		"pretty": "≡", "pre": "[^<>=!]|^", "post": "[^<>=]|$" },
 			{ "ugly": "==", 		"pretty": "=", "pre": "[^<>=!]|^", "post": "[^<>=]|$" },
-			{ "ugly": "\\!\\=\\=", 	"pretty": "∃" },
+			{ "ugly": "\\!\\=\\=", 	"pretty": "≅" },
 			{ "ugly": "!=", 		"pretty": "≠" },
 			{ "ugly": "<>", 		"pretty": "≠" },
 			{ "ugly": ">=",			"pretty": "≥", "pre": "[^=\\-<>]|^", "post": "[^=\\-<>]|$" },
 			{ "ugly": "<=",			"pretty": "≤", "pre": "[^=\\-<>]|^", "post": "[^=\\-<>]|$" },
 			{ "ugly": "=",			"pretty": "≔", "pre": "[^<>=!]|^", "post": "[^<>=]|$" },
 
-			{ "ugly": " / ",		"pretty": " ÷ " },
-			{ "ugly": "\\*",			"pretty": "×" },
 			{ "ugly": "\\+\\=",			"pretty": "⥬" },
 			{ "ugly": "-=",				"pretty": "⥭" },
-			{ "ugly": "\\*\\=",			"pretty": "??" },
-			{ "ugly": "\\/\\=",			"pretty": "?" },
-			{ "ugly": "\\.\\=",			"pretty": "::" },
+			{ "ugly": "\\*\\=",			"pretty": "⩮" },
+			{ "ugly": "\\/\\=",			"pretty": "⩭" },
+			{ "ugly": "\\.\\=",			"pretty": "⩦" },
+
 			{ "ugly": "\\+\\+",			"pretty": "⤊"},
 			{ "ugly": "\\-\\-",			"pretty": "⤋" },
 
-			{ "ugly": "\/\\*\\*",			"pretty": "----------------------------------------------------" },
-			{ "ugly": "\\ \\*\\/",			"pretty": "----------------------------------------------------" },
-			{ "ugly": "\\ \\*",			"pretty": " " },
+			{ "ugly": " / ",		"pretty": " ÷ " },
+			{ "ugly": "\\*",			"pretty": "×" },
+			{ "ugly": "\/\\*\\*",		"pretty": "┌───────────────────────────────────────────────────────────────────────────────" },
+			{ "ugly": "\\ \\*\\/",		"pretty": "└───────────────────────────────────────────────────────────────────────────────" },
+			{ "ugly": "\\ \\*",			"pretty": "│", "style": { "color": "white" } },
+
+
+			// { "ugly": "\\[",			"pretty": "⁅" },
+			// { "ugly": "\\]",			"pretty": "⁆" },
+
+			{ "ugly": "\\[",			"pretty": "⟬" },
+			{ "ugly": "\\]",			"pretty": "⟭" },
+
+
+
 
 
 			// { "ugly": "'",			"pretty": "′" },
@@ -512,7 +525,7 @@
 			// { "ugly": "\\(",			"pretty": "⸨" },
 			// { "ugly": "\\)",			"pretty": "⸩" },
 			{ "ugly": "{",			"pretty": " " },
-			{ "ugly": "}\\ e",			"pretty": "e" },
+			{ "ugly": "}\\ ",			"pretty": " " },
 			{ "ugly": "}",			"pretty": " " },
 			{ "ugly": "not\\s?",	"pretty": "¬", "pre": "\\b", "post": "\\b" },
 			{ "ugly": "!",			"pretty": "¬" },
@@ -523,6 +536,68 @@
 			{ "ugly": "function ",	"pretty": "ƒ ", "style": { "color": "lime" } },
 			{ "ugly": "return",		"pretty": "≪", "pre": "[^\\!@=<>]|^" },
 			{ "ugly": "echo",		"pretty": "≫", "pre": "[^\\!@=<>]|^" },
+			// { "ugly": "if",			"pretty": "⧯", "pre": "[^\\!@=<>]|^" },
+			// { "ugly": "else",		"pretty": "⧮" }, // conflita com fecha chaves e espço
+
+//*
+			{ "ugly": "elseif",		"pretty": "⏀" }, // conflita com fecha chaves e espço
+			// { "ugly": "else if",	"pretty": "⏀" }, // conflita com fecha chaves e espço
+			{ "ugly": "if",			"pretty": "⏁", "pre": "[^\\!@=<>]|^" },
+			{ "ugly": "else",		"pretty": "⏂" }, // conflita com fecha chaves e espço
+			{ "ugly": "foreach",		"pretty": "∀" },
+			{ "ugly": "for",		"pretty": "∀" },
+
+			{ "ugly": "include_once",	"pretty": "⊆" },
+			{ "ugly": "include",		"pretty": "⊂" },
+			{ "ugly": "require_once",	"pretty": "∈" },
+			{ "ugly": "require",		"pretty": "∉" },
+			{ "ugly": "exit",			"pretty": "Ω"},
+			{ "ugly": "die",			"pretty": "Ω"},
+			{ "ugly": "array",			"pretty": "⨈"},
+
+			// { "ugly": "case",			"pretty": "∴"},
+			// { "ugly": "default",		"pretty": "∵"},
+
+			{ "ugly": "case",			"pretty": "⊳"},
+			{ "ugly": "default",		"pretty": "⊵"},
+
+			// { "ugly": "switch",		"pretty": "⁜"},
+			// { "ugly": "switch",		"pretty": "⭄"},
+			{ "ugly": "switch",		"pretty": "⚟"},
+			// { "ugly": "switch",		"pretty": "⛫"},
+
+			{ "ugly": "throws",		"pretty": "⚾"},
+
+
+
+
+			{ "ugly": "break",		"pretty": "☠"},
+
+
+
+
+
+
+//*/
+			// { "ugly": "int",			"pretty": "Z"},
+			// { "ugly": "die\\(.\\)",			"pretty": "Ω"},
+
+
+
+			{ "ugly": "0",			"pretty": "٠"},
+			{ "ugly": "1",			"pretty": "١"},
+			{ "ugly": "2",			"pretty": "٢"},
+			{ "ugly": "3",			"pretty": "٣"},
+			{ "ugly": "4",			"pretty": "٤"},
+			{ "ugly": "5",			"pretty": "٥"},
+			{ "ugly": "6",			"pretty": "٦"},
+			{ "ugly": "7",			"pretty": "٧"},
+			{ "ugly": "8",			"pretty": "٨"},
+			{ "ugly": "9",			"pretty": "٩"},
+
+
+
+			// { "ugly": "if",			"pretty": "┞", "pre": "[^\\!@=<>]|^" },
 			{ "ugly": "false",		"pretty": "⊥", "pre": "\\b", "post": "\\b" },
 			{ "ugly": "true",		"pretty": "⊤", "pre": "\\b", "post": "\\b" },
 			{ "ugly": "null",		"pretty": "∅", "pre": "\\b", "post": "\\b"},
@@ -530,6 +605,10 @@
 			{ "ugly": "&&",			"pretty": "∧", "pre": "\\s|^", "post": "\\s|$"},
 			{ "ugly": "or",			"pretty": "∨", "pre": "\\s|^", "post": "\\s|$"},
 			{ "ugly": "||",			"pretty": "∨"},
-			{ "ugly": "\\\\\\",		"pretty": " "},
-		]}]
+			{ "ugly": "\/\/",		"pretty": " "},
+		]
+	}
+],
+"bracketPairColorizer.highlightActiveScope": true,
+"bracketPairColorizer.showBracketsInGutter": true
 }
