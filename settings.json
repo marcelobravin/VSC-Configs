@@ -381,8 +381,8 @@
 	"editor.multiCursorModifier": "ctrlCmd",
 	"explorer.confirmDragAndDrop": false,
 
-	"php.validate.executablePath": "C:\\xampp\\php\\php.exe", // windows
-	// "php.validate.executablePath": "", // linux
+	// "php.validate.executablePath": "C:\\xampp\\php\\php.exe", // windows;
+	"php.validate.executablePath": "", // linux;
 
 	"window.zoomLevel": -0,
 	"editor.fontSize": 13,
@@ -403,24 +403,8 @@
 	// "terminal.integrated.shell.linux": "zsh",
 	// ##################### Extensions ##################### //
 
-	// Bracket pair colorizer
-	// "bracket-pair-colorizer-2.colors": [
-	// 	"#8BE9FD",
-	// 	"#50FA7B",
-	// 	"#FFB86C",
-	// 	"#FF79C6",
-	// 	"#BD93F9",
-	// 	"#F1FA8C"
-	// ],
-
-	"bracket-pair-colorizer-2.colorMode": "Consecutive",
-	"bracket-pair-colorizer-2.forceUniqueOpeningColor": false,
-	"bracket-pair-colorizer-2.forceIterationColorCycle": false,
-	"bracket-pair-colorizer-2.showBracketsInGutter": true,
-	"bracket-pair-colorizer-2.showBracketsInRuler": true,
-	"bracket-pair-colorizer-2.showVerticalScopeLine": true,
-	"bracket-pair-colorizer-2.showHorizontalScopeLine": true,
-	"bracket-pair-colorizer-2.unmatchedScopeColor": "#FF0000",
+	"bracketPairColorizer.highlightActiveScope": true,
+	"bracketPairColorizer.showBracketsInGutter": true,
 
 	"colorize.languages": [
 		"typescriptreact",
@@ -449,12 +433,12 @@
 	"colorize.enable_search_variables": false,
 	"open-php-html-js-in-browser.selectedBrowser": "Chrome",
 	"editor.accessibilitySupport": "off",
+	// "http.proxy": "http://10.10.193.25:3128", // rede interna da secretaria
 	"sonarlint.connectedMode.project": {
 		"projectKey": "ROH"
 	},
 	"sonarlint.connectedMode.connections.sonarqube": [
 		{
-			// "serverUrl": "https://sonar.mycompany.com",
 			"serverUrl": "https://localhost:9000",
 			"token": "2e73bce63c3907abf3e4c2a918f09f969454eefc" // casa
 			// "token": "600bd961fee3ea1bdd2f5a92f74cc67425283303" // trabalho
@@ -476,139 +460,152 @@
 		"on": "off",
 		"off": "on"
 	},
-	// "http.proxy": "http://10.10.193.25:3128" // rede interna da secretaria
 	"prettifySymbolsMode.substitutions": [{
-		"language": ["php", "java"],
+		"language": ["php", "json"],
 		// "revealOn": "active-line",
 		"revealOn": "selection",
 		"substitutions": [
-			//{ "ugly": "lambda",     "pretty": "λ" },
 
-			{ "ugly": "->",			"pretty": "→", "pre": "[^->]", "post": "[^->]" },
-			{ "ugly": "===",		"pretty": "≡", "pre": "[^<>=!]|^", "post": "[^<>=]|$" },
-			{ "ugly": "==", 		"pretty": "=", "pre": "[^<>=!]|^", "post": "[^<>=]|$" },
-			{ "ugly": "\\!\\=\\=", 	"pretty": "≅" },
-			{ "ugly": "!=", 		"pretty": "≠" },
-			{ "ugly": "<>", 		"pretty": "≠" },
-			{ "ugly": ">=",			"pretty": "≥", "pre": "[^=\\-<>]|^", "post": "[^=\\-<>]|$" },
-			{ "ugly": "<=",			"pretty": "≤", "pre": "[^=\\-<>]|^", "post": "[^=\\-<>]|$" },
-			{ "ugly": "=",			"pretty": "≔", "pre": "[^<>=!]|^", "post": "[^<>=]|$" },
-
+			// operators
+			{ "ugly": "===",			"pretty": "≡", "pre": "[^<>=!]|^", "post": "[^<>=]|$" },
+			{ "ugly": "!=", 			"pretty": "≠" },
+			{ "ugly": "<>", 			"pretty": "≠" },
+			{ "ugly": ">=",				"pretty": "≥", "pre": "[^=\\-<>]|^", "post": "[^=\\-<>]|$" },
+			{ "ugly": "<=",				"pretty": "≤", "pre": "[^=\\-<>]|^", "post": "[^=\\-<>]|$" },
 			{ "ugly": "\\+\\=",			"pretty": "⥬" },
 			{ "ugly": "-=",				"pretty": "⥭" },
-			{ "ugly": "\\*\\=",			"pretty": "⩮" },
-			{ "ugly": "\\/\\=",			"pretty": "⩭" },
-			{ "ugly": "\\.\\=",			"pretty": "⩦" },
+			{ "ugly": "==", 			"pretty": "⇔", "pre": "[^<>=!]|^", "post": "[^<>=]|$" },
+			{ "ugly": "->",				"pretty": "⟶", "pre": "[^->]", "post": "[^->]" },
+			{ "ugly": "=>",				"pretty": "⧐", "pre": "[^->]", "post": "[^->]" },
+			{ "ugly": "\\!\\=\\=",		"pretty": "≢" },
+			{ "ugly": "=",				"pretty": "≔", "pre": "[^<>=!]|^", "post": "[^<>=]|$" },
+			{ "ugly": "\\.\\=",			"pretty": "≐" },
+			{ "ugly": "\\b\\+\\+",			"pretty": "⤊" },
+			{ "ugly": "\\-\\-",			"pretty": "⤋", "pre": "[^<>=!]|^", "post": "[^<>=]|$", "scope": "Other" },
+			{ "ugly": "*",				"pretty": "×", "scope": "Other", "post": "\\W"},
+			{ "ugly": "/",				"pretty": "÷", "scope": "Other" },
 
-			{ "ugly": "\\+\\+",			"pretty": "⤊"},
-			{ "ugly": "\\-\\-",			"pretty": "⤋" },
+			// math symbols
+			{ "ugly": "true",			"pretty": "⊤", "pre": "\\b", "post": "\\b" },
+			{ "ugly": "false",			"pretty": "⊥", "pre": "\\b", "post": "\\b" },
+			{ "ugly": "not\\s?",		"pretty": "¬", "pre": "\\b", "post": "\\b" },
+			{ "ugly": "!",				"pretty": "¬", "scope": "Other" },
+			{ "ugly": "null",			"pretty": "∅", "pre": "\\b", "post": "\\b"},
+			{ "ugly": "and",			"pretty": "∧", "pre": "\\s|^", "post": "\\s|$"},
+			{ "ugly": "&&",				"pretty": "∧", "pre": "\\s|^", "post": "\\s|$"},
+			{ "ugly": "or",				"pretty": "∨", "pre": "\\s|^", "post": "\\s|$"},
+			{ "ugly": "||",				"pretty": "∨"},
+			{ "ugly": "function",		"pretty": "ƒ", "style": { "color": "lime" } },
 
-			{ "ugly": " / ",		"pretty": " ÷ " },
-			{ "ugly": "\\*",			"pretty": "×" },
-			{ "ugly": "\/\\*\\*",		"pretty": "┌───────────────────────────────────────────────────────────────────────────────" },
-			{ "ugly": "\\ \\*\\/",		"pretty": "└───────────────────────────────────────────────────────────────────────────────" },
+			{ "ugly": "infinity",		"pretty": "∞"},
+			{ "ugly": "deg",			"pretty": "º"},
+
+			// data types
+			{ "ugly": "int",			"pretty": "ℤ", "post": "\\W"},
+			{ "ugly": "double",			"pretty": "ℝ"},
+			{ "ugly": "array\\(\\)",	"pretty": "𝕍"},
+			{ "ugly": "array",			"pretty": "𝕍", "post": "[\\(\\ \\)]*"},
+			{ "ugly": "string",			"pretty": "𝕊" },
+
+
+			// Python mode
+			{ "ugly": "{",				"pretty": " " },
+			// { "ugly": "} e",			"pretty": "e" }, // conflita com fecha chaves e espço
+			// { "ugly": "}e",			"pretty": "e" }, // conflita com fecha chaves e espço
+			{ "ugly": "} elseif",		"pretty": "⏀" },
+			{ "ugly": "} else if",		"pretty": "⏀" },
+			{ "ugly": "} else",			"pretty": "⏂" }, // conflita com fecha chaves e espço
+			{ "ugly": "}\\ ",			"pretty": " " },
+
+
+
+			{ "ugly": "}",				"pretty": " " },
+			{ "ugly": "\\;",			"pretty": " " },
+
+			// comments hide
+			// { "ugly": "\/\/",			"pretty": " "},
+			// { "ugly": "#",				"pretty": " ", "scope": "Comment"},
+			// { "ugly": "\\/\\*\\*",		"pretty": " "},
+
+			// phpdocs
+			{ "ugly": "\/\\*\\*",		"pretty": "┌───────────────────────────────────────────────────────────────────────────────"},
+			{ "ugly": " \\*\\/",		"pretty": "└───────────────────────────────────────────────────────────────────────────────" },
 			{ "ugly": "\\ \\*",			"pretty": "│", "style": { "color": "white" } },
 
+			// php symbols
+			{ "ugly": "return",			"pretty": "≪", "pre": "[^\\!@=<>]|^" },
+			{ "ugly": "echo",			"pretty": "≫", "pre": "[^\\!@=<>]|^" },
+			// { "ugly": "elseif",			"pretty": "⏀", "pre": "", "post": "" },
+			{ "ugly": "if",				"pretty": "⏁", "pre": "\\b", "post": "\\b" },
+			// { "ugly": "else",			"pretty": "⏂" }, // conflita com fecha chaves e espço
+			{ "ugly": "foreach",		"pretty": "∀" },
+			{ "ugly": "for\\b",			"pretty": "∀" },
+			{ "ugly": "include_once",	"pretty": "⊆" },
+			{ "ugly": "include\\b",		"pretty": "⊂" },
+			{ "ugly": "require_once",	"pretty": "∈" },
+			{ "ugly": "require\\b",		"pretty": "∉" },
+			{ "ugly": "exit",			"pretty": "Ω"},
+			{ "ugly": "die",			"pretty": "Ω"},
+			{ "ugly": "switch",			"pretty": "⚟"},
+			{ "ugly": "case",			"pretty": "⊳"},
+			{ "ugly": "default",		"pretty": "⊵"},
+			{ "ugly": "break",			"pretty": "☠"},
+			{ "ugly": "throws",			"pretty": "⚾"},
+			{ "ugly": "\\$",			"pretty": "₿"},
 
+			// { "ugly": "beforeSend",		"pretty": "", "style": { "text-decoration-line": "italic", "color":"red", "backgroundColor": "rgba(255,255,0,55)", "fontStyle": "italic" } },
+
+
+			// arabic numbers
+			{ "ugly": "0",				"pretty": "٠"},
+			{ "ugly": "1",				"pretty": "١"},
+			{ "ugly": "2",				"pretty": "٢"},
+			{ "ugly": "3",				"pretty": "٣"},
+			{ "ugly": "4",				"pretty": "٤"},
+			{ "ugly": "5",				"pretty": "٥"},
+			{ "ugly": "6",				"pretty": "٦"},
+			{ "ugly": "7",				"pretty": "٧"},
+			{ "ugly": "8",				"pretty": "٨"},
+			{ "ugly": "9",				"pretty": "٩"},
+
+			// others
+			{ "ugly": "database",		"pretty": "⛁" },
+
+/*
+			{ "ugly": "\\*\\=",		"pretty": "⩮" },
+			{ "ugly": "\\/\\=",		"pretty": "⩭" },
+			// { "ugly": "\\;",			"pretty": "•"},
+			//{ "ugly": "lambda",		"pretty": "λ" },
+			// { "ugly": "=>",			"pretty": "➡", "pre": "[^->]", "post": "[^->]" },
+			// { "ugly": "==", 		"pretty": "↔", "pre": "[^<>=!]|^", "post": "[^<>=]|$" },
+			{ "ugly": "\\!\\=\\=",	"pretty": "≅" },
+			// { "ugly": "\\.\\=",		"pretty": "⩦" }, // não funciona no linux
 			// { "ugly": "\\[",			"pretty": "⁅" },
 			// { "ugly": "\\]",			"pretty": "⁆" },
-
-			{ "ugly": "\\[",			"pretty": "⟬" },
-			{ "ugly": "\\]",			"pretty": "⟭" },
-
-
-
-
-
+			// { "ugly": "\\[",		"pretty": "⟬" },
+			// { "ugly": "\\]",		"pretty": "⟭" },
+			// { "ugly": "EOF",		"pretty": "⛁" },
 			// { "ugly": "'",			"pretty": "′" },
 			// { "ugly": "\"",			"pretty": "″" },
 			// { "ugly": "\\(",			"pretty": "⸨" },
 			// { "ugly": "\\)",			"pretty": "⸩" },
-			{ "ugly": "{",			"pretty": " " },
-			{ "ugly": "}\\ ",			"pretty": " " },
-			{ "ugly": "}",			"pretty": " " },
-			{ "ugly": "not\\s?",	"pretty": "¬", "pre": "\\b", "post": "\\b" },
-			{ "ugly": "!",			"pretty": "¬" },
-			// { "ugly": "\\;",			"pretty": "•"},
-			{ "ugly": "\\;",			"pretty": " "},
 			// { "ugly": ";",			"pretty": "Ω"},
 			// { "ugly": "\\.",			"pretty": "•"},
-			{ "ugly": "function ",	"pretty": "ƒ ", "style": { "color": "lime" } },
-			{ "ugly": "return",		"pretty": "≪", "pre": "[^\\!@=<>]|^" },
-			{ "ugly": "echo",		"pretty": "≫", "pre": "[^\\!@=<>]|^" },
-			// { "ugly": "if",			"pretty": "⧯", "pre": "[^\\!@=<>]|^" },
 			// { "ugly": "else",		"pretty": "⧮" }, // conflita com fecha chaves e espço
-
-//*
-			{ "ugly": "elseif",		"pretty": "⏀" }, // conflita com fecha chaves e espço
-			// { "ugly": "else if",	"pretty": "⏀" }, // conflita com fecha chaves e espço
-			{ "ugly": "if",			"pretty": "⏁", "pre": "[^\\!@=<>]|^" },
-			{ "ugly": "else",		"pretty": "⏂" }, // conflita com fecha chaves e espço
-			{ "ugly": "foreach",		"pretty": "∀" },
-			{ "ugly": "for",		"pretty": "∀" },
-
-			{ "ugly": "include_once",	"pretty": "⊆" },
-			{ "ugly": "include",		"pretty": "⊂" },
-			{ "ugly": "require_once",	"pretty": "∈" },
-			{ "ugly": "require",		"pretty": "∉" },
-			{ "ugly": "exit",			"pretty": "Ω"},
-			{ "ugly": "die",			"pretty": "Ω"},
-			{ "ugly": "array",			"pretty": "⨈"},
-
+			// { "ugly": "if",			"pretty": "⧯", "pre": "[^\\!@=<>]|^" },
+			// { "ugly": "array",			"pretty": "⨈"}, // não funciona no linux
 			// { "ugly": "case",			"pretty": "∴"},
 			// { "ugly": "default",		"pretty": "∵"},
-
-			{ "ugly": "case",			"pretty": "⊳"},
-			{ "ugly": "default",		"pretty": "⊵"},
-
+			// { "ugly": "int",		"pretty": "ℕ"},
 			// { "ugly": "switch",		"pretty": "⁜"},
 			// { "ugly": "switch",		"pretty": "⭄"},
-			{ "ugly": "switch",		"pretty": "⚟"},
 			// { "ugly": "switch",		"pretty": "⛫"},
-
-			{ "ugly": "throws",		"pretty": "⚾"},
-
-
-
-
-			{ "ugly": "break",		"pretty": "☠"},
-
-
-
-
-
-
-//*/
 			// { "ugly": "int",			"pretty": "Z"},
 			// { "ugly": "die\\(.\\)",			"pretty": "Ω"},
-
-
-
-			{ "ugly": "0",			"pretty": "٠"},
-			{ "ugly": "1",			"pretty": "١"},
-			{ "ugly": "2",			"pretty": "٢"},
-			{ "ugly": "3",			"pretty": "٣"},
-			{ "ugly": "4",			"pretty": "٤"},
-			{ "ugly": "5",			"pretty": "٥"},
-			{ "ugly": "6",			"pretty": "٦"},
-			{ "ugly": "7",			"pretty": "٧"},
-			{ "ugly": "8",			"pretty": "٨"},
-			{ "ugly": "9",			"pretty": "٩"},
-
-
-
 			// { "ugly": "if",			"pretty": "┞", "pre": "[^\\!@=<>]|^" },
-			{ "ugly": "false",		"pretty": "⊥", "pre": "\\b", "post": "\\b" },
-			{ "ugly": "true",		"pretty": "⊤", "pre": "\\b", "post": "\\b" },
-			{ "ugly": "null",		"pretty": "∅", "pre": "\\b", "post": "\\b"},
-			{ "ugly": "and",		"pretty": "∧", "pre": "\\s|^", "post": "\\s|$"},
-			{ "ugly": "&&",			"pretty": "∧", "pre": "\\s|^", "post": "\\s|$"},
-			{ "ugly": "or",			"pretty": "∨", "pre": "\\s|^", "post": "\\s|$"},
-			{ "ugly": "||",			"pretty": "∨"},
-			{ "ugly": "\/\/",		"pretty": " "},
+// */
 		]
 	}
 ],
-"bracketPairColorizer.highlightActiveScope": true,
-"bracketPairColorizer.showBracketsInGutter": true
+
 }
