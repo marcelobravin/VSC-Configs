@@ -14,6 +14,19 @@
 		"when"   : "editorTextFocus"
 	},
 
+
+	{
+		"key"    : "alt+;",
+		"command": "editor.action.commentLine",
+		"when"   : "editorTextFocus"
+	},
+
+	// {
+	// 	"key"    : "alt+down",
+	// 	"command": "editor.action.commentLine",
+	// 	"when"   : "editorTextFocus"
+	// },
+
 	{
 		"key"    : "ctrl+shift+alt+s",
 		"command": "workbench.action.files.saveAll",
@@ -40,6 +53,26 @@
 	{
 		"key": "shift+alt+up",
 		"command": "editor.action.transformToUppercase"
+	},
+	{
+		"key": "alt+oem_2",
+		"command": "extension.insertSemicolon",
+		"when": "editorTextFocus"
+	},
+	{
+		"key": "ctrl+oem_2",
+		"command": "-extension.insertSemicolon",
+		"when": "editorTextFocus"
+	},
+	{
+		"key": "shift+alt+oem_2",
+		"command": "extension.insertSemicolonWithNewLine",
+		"when": "editorTextFocus"
+	},
+	{
+		"key": "ctrl+shift+oem_2",
+		"command": "-extension.insertSemicolonWithNewLine",
+		"when": "editorTextFocus"
 	}
 
 ]

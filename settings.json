@@ -607,5 +607,10 @@
 		]
 	}
 ],
+"sonarlint.rules": {
+	"javascript:S4138": {
+		"level": "off"
+	}
+},
 
 }
