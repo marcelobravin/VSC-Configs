@@ -9,6 +9,14 @@
 		"description": "Log output to console"
 	},
 
+	"Exibir": {
+		"prefix": "exibir",
+		"body": [
+			"exibir($0, true);"
+		],
+		"description": "Print_r & die"
+	},
+
 	"Session": {
 		"prefix": "session",
 		"body": [
