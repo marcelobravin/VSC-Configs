@@ -3,29 +3,30 @@
 	// https://code.visualstudio.com/docs/getstarted/keybindings
 
 	{
-		"key"    : "ctrl+shift+;",
+		// "key"    : "ctrl+shift+;", // linux
+		"key"    : "ctrl+shift+oem_2", // windows
 		"command": "editor.action.blockComment",
 		"when"   : "editorTextFocus"
 	},
 
 	{
-		"key"    : "ctrl+;",
+		// "key"    : "ctrl+;", // linux
+		"key"    : "ctrl+oem_2", // windows
 		"command": "editor.action.commentLine",
 		"when"   : "editorTextFocus"
 	},
-
-
-	// {
-	// 	"key"    : "alt+;",
-	// 	"command": "editor.action.commentLine",
-	// 	"when"   : "editorTextFocus"
-	// },
-
-	// {
-	// 	"key"    : "alt+down",
-	// 	"command": "editor.action.commentLine",
-	// 	"when"   : "editorTextFocus"
-	// },
+	{
+		// "key": "alt+;", // linux
+		"key": "alt+oem_2", // windows
+		"command": "extension.insertSemicolon",
+		"when": "editorTextFocus"
+	},
+	{
+		// "key": "shift+alt+;", // linux
+		"key": "alt+shift+oem_2", // windows
+		"command": "extension.insertSemicolonWithNewLine",
+		"when": "editorTextFocus"
+	},
 
 	{
 		"key"    : "ctrl+shift+alt+s",
@@ -57,15 +58,5 @@
 	{
 		"key": "shift+alt+up",
 		"command": "editor.action.transformToUppercase"
-	},
-	//{
-	//	"key": "alt+;",
-	//	"command": "extension.insertSemicolon",
-	//	"when": "editorTextFocus"
-	//},
-	//{
-	//	"key": "shift+alt+;",
-	//	"command": "extension.insertSemicolonWithNewLine",
-	//	"when": "editorTextFocus"
-	//}
+	}
 ]
