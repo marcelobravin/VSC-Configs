@@ -58,14 +58,14 @@
 		"key": "shift+alt+up",
 		"command": "editor.action.transformToUppercase"
 	},
-	{
-		"key": "alt+;",
-		"command": "extension.insertSemicolon",
-		"when": "editorTextFocus"
-	},
-	{
-		"key": "shift+alt+;",
-		"command": "extension.insertSemicolonWithNewLine",
-		"when": "editorTextFocus"
-	}
+	//{
+	//	"key": "alt+;",
+	//	"command": "extension.insertSemicolon",
+	//	"when": "editorTextFocus"
+	//},
+	//{
+	//	"key": "shift+alt+;",
+	//	"command": "extension.insertSemicolonWithNewLine",
+	//	"when": "editorTextFocus"
+	//}
 ]

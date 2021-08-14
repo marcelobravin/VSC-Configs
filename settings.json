@@ -431,8 +431,8 @@
 	"open-php-html-js-in-browser.selectedBrowser": "Chrome",
 	"editor.accessibilitySupport": "off",
 
-	// "php.validate.executablePath": "C:\\xampp\\php\\php.exe", // windows;
-	"php.validate.executablePath": "", // linux;
+	"php.validate.executablePath": "C:\\xampp\\php\\php.exe", // windows;
+	//"php.validate.executablePath": "", // linux;
 
 	"http.proxy": "http://10.10.193.25:3128", // rede interna da secretaria
 
@@ -442,16 +442,16 @@
 	"sonarlint.connectedMode.connections.sonarqube": [
 		{
 			"serverUrl": "https://localhost:9000",
-			// "token": "2e73bce63c3907abf3e4c2a918f09f969454eefc" // casa
-			"token": "600bd961fee3ea1bdd2f5a92f74cc67425283303" // trabalho
+			"token": "2e73bce63c3907abf3e4c2a918f09f969454eefc" // casa;
+			//"token": "600bd961fee3ea1bdd2f5a92f74cc67425283303" // trabalho
 		}
 	],
 
-	// "sonarlint.ls.javaHome": "C:\\Program Files\\Java\\jdk-11.0.11+9", // casa
-	"sonarlint.ls.javaHome": "/lib/jvm/java-1.11.0-openjdk-amd64/", // trabalho
+	"sonarlint.ls.javaHome": "C:\\Program Files\\Java\\jdk-11.0.11+9", // casa;
+	//"sonarlint.ls.javaHome": "/lib/jvm/java-1.11.0-openjdk-amd64/", // trabalho
 
-	// "sonarlint.pathToNodeExecutable": "C:\\\\Program Files\\\\nodejs\\\\node.exe", // windows
-	"sonarlint.pathToNodeExecutable": "/usr/bin/nodejs", // linux
+	"sonarlint.pathToNodeExecutable": "C:\\\\Program Files\\\\nodejs\\\\node.exe", // windows;
+	//"sonarlint.pathToNodeExecutable": "/usr/bin/nodejs", // linux
 
 	"toggleboolean.mapping": {
 
