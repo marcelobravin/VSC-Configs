@@ -15,11 +15,11 @@
 	},
 
 
-	{
-		"key"    : "alt+;",
-		"command": "editor.action.commentLine",
-		"when"   : "editorTextFocus"
-	},
+	// {
+	// 	"key"    : "alt+;",
+	// 	"command": "editor.action.commentLine",
+	// 	"when"   : "editorTextFocus"
+	// },
 
 	// {
 	// 	"key"    : "alt+down",
@@ -43,8 +43,12 @@
 		}
 	},
 	{
-		"key": "ctrl+up ctrl+up",
+		"key": "ctrl+shift+alt+up",
 		"command": "editor.emmet.action.incrementNumberByOne"
+	},
+	{
+		"key": "ctrl+shift+alt+down",
+		"command": "editor.emmet.action.decrementNumberByOne"
 	},
 	{
 		"key": "shift+alt+down",
@@ -55,24 +59,13 @@
 		"command": "editor.action.transformToUppercase"
 	},
 	{
-		"key": "alt+oem_2",
+		"key": "alt+;",
 		"command": "extension.insertSemicolon",
 		"when": "editorTextFocus"
 	},
 	{
-		"key": "ctrl+oem_2",
-		"command": "-extension.insertSemicolon",
-		"when": "editorTextFocus"
-	},
-	{
-		"key": "shift+alt+oem_2",
+		"key": "shift+alt+;",
 		"command": "extension.insertSemicolonWithNewLine",
 		"when": "editorTextFocus"
-	},
-	{
-		"key": "ctrl+shift+oem_2",
-		"command": "-extension.insertSemicolonWithNewLine",
-		"when": "editorTextFocus"
 	}
-
 ]
