@@ -608,13 +608,13 @@
 			// { "ugly": "die\\(.\\)",			"pretty": "Ω"},
 			// { "ugly": "if",			"pretty": "┞", "pre": "[^\\!@=<>]|^" },
 // */
-		]
-	}
-],
-"sonarlint.rules": {
-	"javascript:S4138": {
-		"level": "off"
-	}
-},
+			]
+		}
+	],
+	"sonarlint.rules": {
+		"javascript:S4138": {
+			"level": "off"
+		}
+	},
 
 }

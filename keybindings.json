@@ -3,26 +3,26 @@
 	// https://code.visualstudio.com/docs/getstarted/keybindings
 
 	{
-		// "key"    : "ctrl+shift+;", // linux
+		//"key"    : "ctrl+shift+;", // linux
 		"key"    : "ctrl+shift+oem_2", // windows
 		"command": "editor.action.blockComment",
 		"when"   : "editorTextFocus"
 	},
 
 	{
-		// "key"    : "ctrl+;", // linux
-		"key"    : "ctrl+oem_2", // windows
+		//"key"    : "ctrl+;", // linux
+		 "key"    : "ctrl+oem_2", // windows
 		"command": "editor.action.commentLine",
 		"when"   : "editorTextFocus"
 	},
 	{
-		// "key": "alt+;", // linux
+		//"key": "alt+;", // linux
 		"key": "alt+oem_2", // windows
 		"command": "extension.insertSemicolon",
 		"when": "editorTextFocus"
 	},
 	{
-		// "key": "shift+alt+;", // linux
+		//"key": "shift+alt+;", // linux
 		"key": "alt+shift+oem_2", // windows
 		"command": "extension.insertSemicolonWithNewLine",
 		"when": "editorTextFocus"
