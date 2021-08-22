@@ -434,7 +434,7 @@
 	"php.validate.executablePath": "C:\\xampp\\php\\php.exe", // windows;
 	//"php.validate.executablePath": "", // linux;
 
-	"http.proxy": "http://10.10.193.25:3128", // rede interna da secretaria
+	// "http.proxy": "http://10.10.193.25:3128", // rede interna da secretaria
 
 	"sonarlint.connectedMode.project": {
 		"projectKey": "ROH"
