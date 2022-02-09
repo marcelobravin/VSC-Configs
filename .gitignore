@@ -1,3 +1,6 @@
 
 workspaceStorage/*
 *.vscdb
+globalStorage/state.vscdb
+*/intelephense_data_1
+globalStorage/state.vscdb.backup

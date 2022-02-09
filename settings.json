@@ -431,7 +431,8 @@
 	"open-php-html-js-in-browser.selectedBrowser": "Chrome",
 	"editor.accessibilitySupport": "off",
 
-	"php.validate.executablePath": "C:\\xampp\\php\\php.exe", // windows
+	//"php.validate.executablePath": "C:\\xampp\\php\\php.exe", // windows XAMP
+	"php.validate.executablePath": "C:/wamp64/bin/php/php8.1.0/php.exe", // windows WAMP
 	//"php.validate.executablePath": "", // linux;
 
 	// "http.proxy": "http://10.10.193.25:3128", // rede interna da secretaria
